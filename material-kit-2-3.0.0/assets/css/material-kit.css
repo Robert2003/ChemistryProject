@@ -18,10 +18,25 @@
   text-indent: 50px;
 }
 
-div.c {
-  text-indent: 30%;
+div.b {
+  text-indent: 98px;
 }
 
+div.c {
+  text-indent: 142px;
+}
+
+div.d {
+  text-indent: 57px;
+}
+
+
+.center {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 50%;
+ }
 
 :root {
   --bs-blue: #63B3ED;
