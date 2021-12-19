@@ -5,6 +5,91 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
  /* Three image containers (use 25% for four, and 50% for two, etc) */
+ body,
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6,
+ p
+  { font-family: 'Raleway', sans-serif;
+ }
+
+ h1{font-size:35px;}
+ h2{font-size:30px;}
+ h3{font-size:25px;}
+ p {font-size:16px;}
+
+ body {background:#490A3D;}
+ .quotemark {
+     position: relative;
+     top: -12px;
+     padding-right: 10px;
+ }
+
+ blockquote {
+   border-left: 10px solid #490A3D;
+   margin: 30px 10px;
+   padding: 10px 30px;
+ }
+ blockquote:before {
+   color: #ccc;
+   line-height: 0.1em;
+   margin-right: 0.25em;
+   vertical-align: -0.4em;
+ }
+ blockquote h1, h2, p{
+   display: inline;
+ }
+ blockquote footer {
+ 	font-size:18px;
+ 	text-align:right;
+ 	color:transparent;
+ }
+
+ .container1 {
+ 	max-height:800px;
+ 	margin: 10% auto auto auto;
+ }
+ .quotebox {
+ 	background:#fff;
+ 	max-width:1000px;
+ 	min-height:100px;
+ 	border:1px solid #222;
+ 	border-radius:5px;
+ 	margin:auto;
+ }
+
+ @media only screen and (max-width: 768px){
+     #quotetext {font-size:25px; }
+ 	.container {	margin-right:20px;}
+     }
+ @media only screen and (max-width: 320px){
+     #quotetext {font-size:18px; }
+
+     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  .row {
    display: flex;
  }

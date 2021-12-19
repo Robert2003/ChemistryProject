@@ -262,3 +262,110 @@ function debounce(func, wait, immediate) {
     if (immediate && !timeout) func.apply(context, args);
   };
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function inIframe() {
+    try {
+        return window.self !== window.top;
+    } catch (e) {
+        return true;
+    }
+}
+
+		var colors = [
+			'#490A3D',
+			'#BD1550',
+			'#E97F02',
+			'#F8CA00',
+			'#8A9B0F',
+			'#69D2E7',
+			'#FA6900',
+			'#16a085',
+			'#27ae60',
+			'#2c3e50',
+			'#f39c12',
+			'#e74c3c',
+			'#9b59b6',
+			'#FB6964',
+			'#342224',
+			'#472E32',
+			'#77B1A9',
+			'#73A857'
+		];
+
+var quotes = [
+    ["L-am întrebat pe tipul de lângă mine dacă are vreun hipobromit de sodiu. El a spus NaBrO",""],
+    ["Titanul este un metal amoros. Când se încălzește, se va combina cu orice!",""],
+    ["Dacă Iron Man și Silver Surfer ar face echipă, ar fi aliaje",""],
+  	["De ce s-a dizolvat ursul alb în apă? Pentru că era un urs polar",""]
+	  ["Doresc să-mi cer scuze pentru că nu am mai multe glume de chimie , dar le adaug doar periodic",""],
+  	["De ce sunt chimiștii buni la rezolvarea problemelor? Pentru că au toate soluțiile",""],
+	  ["Dacă Silver Surfer și Iron Man au făcut echipă ... ar fi aliaje",""],
+	  ["Dacă nu faceți parte din soluție, faceți parte din precipitat",""],
+	  ["Care este formula chimică a cafelei? COFe2",""],
+	  ["Care este formula chimică pentru o banană? BaNa2",""]
+	];
+
+
+var currentQuote = "";
+var currentAuthor = "";
+var randomquote = "";
+var randomcolor = "";
+
+function getQuote() {
+	randomquote = Math.floor(Math.random() * quotes.length);
+	randomcolor = Math.floor(Math.random() * colors.length);
+    currentQuote = quotes[randomquote][0];
+    currentAuthor = quotes[randomquote][1];
+	if (inIframe()) {
+		$('#tweet-quote').attr('href', 'https://twitter.com/intent/tweet?hashtags=quotes&related=aLamm&text=' + encodeURIComponent('"' + currentQuote + '" ' + currentAuthor));
+	}
+
+	$(document).ready(function () {
+	    $('html body').animate({
+	        backgroundColor: colors[randomcolor],
+	        color: colors[randomcolor]
+	    }, 500);
+	    $('#newquote, .social-icons .fa-twitter').animate({ backgroundColor: colors[randomcolor] }, 500);
+			$('blockquote footer').animate({ color: colors[randomcolor] }, 500);
+	    $('blockquote').animate({ borderLeftColor: colors[randomcolor] }, 500);
+	    $('#quotetext').animate({ opacity: 0 }, 500, function () {
+	        $(this).animate({ opacity: 1 }, 500);
+	        $(this).text(currentQuote);
+	    });
+	    $('#quotesource').animate({ opacity: 0 }, 500, function () {
+	        $(this).animate({ opacity: 1 }, 500);
+	        $(this).text(currentAuthor);
+	    });
+    });
+}
+
+function openURL(url) {
+    window.open(url, 'Share', 'width=550, height=400, toolbar=0, scrollbars=1 ,location=0 ,statusbar=0,menubar=0, resizable=0');
+}
+
+getQuote();
+
+$(document).ready(function () {
+    $('#newquote').on('click', getQuote);
+    $('#tweetquote').on('click', function () {
+        if (!inIframe()) {
+            openURL('https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent('"' + currentQuote + '" ' + currentAuthor));
+        }
+    });
+});
