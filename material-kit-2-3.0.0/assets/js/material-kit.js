@@ -318,7 +318,15 @@ var quotes = [
 	  ["Dacă Silver Surfer și Iron Man au făcut echipă ... ar fi aliaje",""],
 	  ["Dacă nu faceți parte din soluție, faceți parte din precipitat",""],
 	  ["Care este formula chimică a cafelei? COFe2",""],
-	  ["Care este formula chimică pentru o banană? BaNa2",""]
+	  ["Care este formula chimică pentru o banană? BaNa2",""],
+    ["Vechii chimiști nu mor niciodată, doar încetează să reacționeze.",""],
+    ["Cum numiți un dinte într-un pahar cu apă? O soluție de un molar.",""],
+    ["Ce a spus chimistul când a găsit doi izotopi de heliu? HeHe",""],
+    ["Care este cea mai importantă regulă de chimie? Nu linge niciodată lingura!",""],
+    ["De ce tulburare emoțională suferă un cromatograf gazos ? Anxietate de separare.",""],
+    ["De ce sunt chimiștii atât de pricepuți la rezolvarea problemelor? Pentru că au toate soluțiile.",""],
+    ["Heliu intră într-un bar. Barmanul spune: „ Aici nu servim gaze nobile ”. Heliul nu reacționează.",""],
+    ["De ce chimistul și-a îmbrăcat pantofii cu cauciuc siliconic? A vrut să-și reducă amprenta de carbon.",""],
 	];
 
 
